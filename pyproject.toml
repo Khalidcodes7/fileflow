@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fileflow"
+version = "0.1.0"
+description = "Automatically organize a messy folder into categorized subfolders."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+fileflow = "fileflow.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fileflow*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
